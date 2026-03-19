@@ -1,0 +1,120 @@
+/* ================== RESET E BASE ================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111827; /* fundo geral */
+    color: #ffffff;
+}
+
+/* ================== ANIMAÇÕES ================== */
+.cart-modal, 
+.product-modal { 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.hidden-panel { 
+    transform: translateX(100%); 
+}
+
+.hidden-modal { 
+    opacity: 0; 
+    pointer-events: none; 
+    transform: scale(0.95); 
+}
+
+/* ================== PRODUTO ESGOTADO ================== */
+.sold-out { 
+    filter: grayscale(1); 
+    opacity: 0.6; 
+    pointer-events: none; 
+}
+
+/* ================== BOTÕES DE CATEGORIA ================== */
+.cat-btn {
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    transition: all 0.2s ease;
+    background: #f3f4f6;
+    border: none;
+    cursor: pointer;
+}
+
+.cat-btn:hover { 
+    background: #e5e7eb; 
+}
+
+.active-cat {
+    background: #4f46e5 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* ================== SCROLL ================== */
+/* esconder scrollbar */
+.no-scrollbar::-webkit-scrollbar { 
+    display: none; 
+}
+
+.no-scrollbar { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+/* scrollbar padrão */
+::-webkit-scrollbar { 
+    width: 6px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: #1f2937; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: #4f46e5; 
+    border-radius: 10px; 
+}
+
+/* ================== PRODUTOS ================== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 10px;
+}
+
+.product {
+    background: #1f2937;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* ================== MODAL ================== */
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ffffff;
+    color: #000;
+    padding: 20px;
+    border-radius: 16px;
+    width: 300px;
+}
